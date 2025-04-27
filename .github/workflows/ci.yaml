@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Run Renovate
+        env:
+          RENOVATE_PAT: ${{ secrets.RENOVATE_PAT }}
+        run: |
+          set -ex
+
+          GIT_REPOSITORY="DevDavido/35311-renovate-reproduction-updatable-dependencies-project"
+          GIT_REPOSITORY_BRANCH="main"
+          CURRENT_WORKING_DIRECTORY=$(pwd)
+
+          docker run --rm \
+            -e "LOG_LEVEL=debug" \
+            -e "RENOVATE_TOKEN=${RENOVATE_PAT}" \
+            -e "RENOVATE_PLATFORM=github" \
+            -e "RENOVATE_AUTODISCOVER=false" \
+            -e "RENOVATE_DRY_RUN=full" \
+            -e "RENOVATE_REPOSITORIES=${GIT_REPOSITORY}" \
+            -e "RENOVATE_BASE_BRANCHES=renovate/integration/${GIT_REPOSITORY_BRANCH}" \
+            -e "RENOVATE_CONFIG_FILE=/renovate.json" \
+            -v ${CURRENT_WORKING_DIRECTORY}/renovate-global-config.json:/renovate.json \
+            renovate/renovate:39-full
