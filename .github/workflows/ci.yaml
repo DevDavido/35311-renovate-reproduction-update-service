@@ -27,7 +27,7 @@ jobs:
             -e "RENOVATE_AUTODISCOVER=false" \
             -e "RENOVATE_DRY_RUN=full" \
             -e "RENOVATE_REPOSITORIES=${GIT_REPOSITORY}" \
-            -e "RENOVATE_BASE_BRANCHES=renovate/integration/${GIT_REPOSITORY_BRANCH}" \
+            -e "RENOVATE_BASE_BRANCHES=${GIT_REPOSITORY_BRANCH}" \
             -e "RENOVATE_CONFIG_FILE=/renovate.json" \
             -v ${CURRENT_WORKING_DIRECTORY}/renovate-global-config.json:/renovate.json \
             renovate/renovate:39-full
