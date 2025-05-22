@@ -18,7 +18,7 @@ The repository [renovate-reproduction-updatable-dependencies-project](https://gi
 }
 ```
 
-But when executing the Azure pipeline to run the renovate update we get the following error:
+But when executing the Azure pipeline or [GitHub workflow](https://github.com/DevDavido/35311-renovate-reproduction-update-service/actions/runs/15185965684/job/42706317055#step:3:385) to run the renovate update we get the following error:
 
 ```
 Preset fetch error (repository=Products/example-project)
