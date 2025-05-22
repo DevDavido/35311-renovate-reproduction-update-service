@@ -9,74 +9,7 @@
         "workarounds:all",
         ":disablePrControls",
         ":disableVulnerabilityAlerts",
-        ":gitSignOff",
-
-        ":docker",
-        "docker:pinDigests",
-
-        ":gomod",
-
-        ":npm"
-    ],
-
-    "prCreation": "immediate",
-    "prHourlyLimit": 0,
-    "prConcurrentLimit": 2,
-    "automergeType": "pr",
-    "automergeStrategy": "squash",
-    "platformAutomerge": true,
-    "autoApprove": true,
-    "updateNotScheduled": true,
-    "semanticCommits": "enabled",
-    "semanticCommitType": "chore",
-    "semanticCommitScope": "dependencies",
-    "branchPrefix": "renovate/integration/",
-    "branchPrefixOld": "renovate/integration/",
-    "branchNameStrict": true,
-    "ignoreTests": false,
-    "ignoreUnstable": true,
-    "commitBody": "[skip ci]",
-    "commitMessageLowerCase": "auto",
-    "fetchChangeLogs": "pr",
-    "separateMinorPatch": false,
-    "pruneBranchAfterAutomerge": true,
-    "dependencyDashboard": false,
-    "dependencyDashboardApproval": false,
-    "allowScripts": false,
-    "printConfig": true,
-    "gitAuthor": "Renovate Bot <renovate-bot@xxx.de>",
-    "requireConfig": "required",
-    "onboarding": false,
-    "autodiscover": false,
-    "internalChecksFilter": "strict",
-
-    "major": {
-        "enabled": false
-    },
-    "lockFileMaintenance": {
-        "enabled": true,
-        "automerge": true
-    },
-    "minor": {
-        "enabled": true,
-        "automerge": true
-    },
-    "patch": {
-        "enabled": true,
-        "automerge": true
-    },
-    "digest": {
-        "enabled": true,
-        "automerge": true
-    },
-    "pin": {
-        "enabled": true,
-        "automerge": true
-    },
-
-    "labels": [
-        "dependencies",
-        "renovate"
+        ":gitSignOff"
     ],
 
     "packageRules": [
