@@ -13,7 +13,7 @@ The repository [renovate-reproduction-updatable-dependencies-project](https://gi
         // Original Azure reference: 
         // "local>Products/dev-renovate-update-service:renovate-global-config#0.1.0"
         
-        "github>DevDavido/35311-renovate-reproduction-updatable-dependencies-project:renovate-global-config#0.1.0"
+        "github>DevDavido/35311-renovate-reproduction-update-service:renovate-global-config#0.1.0"
      ]
 }
 ```
